@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --font-color: aliceblue;
+  --work-sans: "Work Sans", sans-serif;
+  --border-radius: 6px;
+  --default-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  --inner-shadow: 0px -23px 25px 0px rgba(0, 0, 0, 0.17) inset,
+    0px -36px 30px 0px rgba(0, 0, 0, 0.15) inset,
+    0px -79px 40px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 1px rgba(0, 0, 0, 0.06),
+    0px 4px 2px rgba(0, 0, 0, 0.09), 0px 8px 4px rgba(0, 0, 0, 0.09),
+    0px 16px 8px rgba(0, 0, 0, 0.09);
+  --second-inner-shadow: rgba(0, 0, 0, 0.45) 1px 1px 40px 0px inset;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  font-family: var(--work-sans);
+}
+
+.main-container {
+  height: 100vh;
+  width: 100vw;
+
+  background: #3b6075;
+  display: grid;
+  place-items: center;
+}
+
+.game-2048 {
+  width: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Record Section */
+.record-section {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  color: var(--font-color);
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.record-section div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  font-weight: 650;
+}
+
+.digit {
+  padding: 8px 16px;
+  font-size: 30px;
+
+  font-weight: 550;
+  border-radius: var(--border-radius);
+  background: #4e94ab;
+
+  box-shadow: var(--default-shadow);
+}
+
+/* Game Board */
+.game-board {
+  position: relative;
+
+  padding: 16px;
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100px;
+  width: 100px;
+
+  font-weight: 500;
+  font-size: 30px;
+  border-radius: var(--border-radius);
+
+  color: var(--font-color);
+  background: #4b768f;
+  box-shadow: var(--default-shadow);
+
+  transition: all 100ms;
+}
+
+/* .element:hover {
+    box-shadow: var(--second-inner-shadow);
+} */
+
+.game-over {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #335365;
+  background: #5d85a0dd;
+  font-size: 50px;
+  font-weight: 600;
+  border-radius: var(--border-radius);
+
+  box-shadow: var(--default-shadow);
+  transition: all 200ms;
+}
+
+/* Action Buttons */
+.action-button-section {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.action-buttons {
+  background: #579395;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  border-radius: 5px;
+  box-shadow: var(--default-shadow);
+  cursor: pointer;
+}
+
+:global(.action-button-icon) {
+  color: white;
+  font-size: 30px;
+}
+
+/* New Game Section */
+.new-game-section {
+  width: 100%;
+  display: flex;
+}
+
+:global(.new-game-button) {
+  margin: auto;
+  padding: 8px 12px;
+
+  font-size: 24px;
+  font-weight: 600;
+
+  color: var(--font-color);
+  background: #c07001df;
+
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--default-shadow);
+
+  cursor: pointer;
+  transition: all 100ms;
+}
+
+:global(.new-game-button:hover) {
+  color: #333;
+}
+
+/* Different Colors */
+.element-2 {
+  background: #7ab7cd;
+}
+
+.element-4 {
+  background: #4e94ab;
+}
+
+.element-8 {
+  background: #437291;
+}
+
+.element-16 {
+  background: #386578;
+}
+
+.element-32 {
+  background: #2d4d60;
+}
+
+.element-64 {
+  background: #21384a;
+}
+
+.element-128 {
+  color: #555;
+  background: #ffd700;
+}
+
+.element-256 {
+  color: #555;
+  background: #e8d100;
+}
+
+.element-512 {
+  color: #555;
+  background: #cbc200;
+}
+
+.element-1024 {
+  background: #ada300;
+}
+
+.element-2048 {
+  background: #8f8500;
+}
