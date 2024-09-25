@@ -1,7 +1,12 @@
-import Game2048 from "./Components/Game2048";
+import { HashRouter as Router } from "react-router-dom";
+import AppRoutes from "./Router/route";
 
 function App() {
-  return <Game2048 />;
+  return (
+    <Router>
+      <AppRoutes />
+    </Router>
+  );
 }
 
 export default App;
